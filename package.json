@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"cd client && npm run start\" \" cd server && npm run start\""
+    "start": "npx kill-port 3001 && concurrently \"cd client && npm run start\" \" cd server && npm run start\"",
+    "server":"cd server && npm run start",
+    "client":"cd client && npm run start"
   },
   "author": "",
   "license": "ISC",
